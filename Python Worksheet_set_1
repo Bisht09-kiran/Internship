@@ -1,0 +1,98 @@
+Multiple-Choice Questions 
+
+Q1. Which of the following operators is used to calculate the remainder in a division?
+C) %
+
+Q2. In python 2//3 is equal to?
+B) 0
+
+Q3. In python, 6<<2 is equal to?
+C) 24
+
+Q4. In python, 6&2 will give which of the following as output?
+A) 2
+
+Q5. In python, 6|2 will give which of the following as output?
+D) 6
+
+Q6. What does the finally keyword denote in Python?
+C) The finally block will be executed no matter if the try block raises an error or not.
+
+Q7. What is the raise keyword used for in Python?
+A) It is used to raise an exception.
+
+Q8. Which of the following is a common use case of the yield keyword in Python?
+C) In defining a generator
+
+Q9. Which of the following are valid variable names?
+A) _abc
+C) abc2
+
+Q10. Which of the following are keywords in Python?
+A) yield
+B) raise
+
+Programming Questions 
+
+Q11. Write a python program to find the factorial of a number.
+
+Factorial of a Number
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+# Example usage
+num = 5
+print(f"The factorial of {num} is {factorial(num)}")
+
+Q12. Write a python program to find whether a number is prime or composite.
+Prime or Composite Number
+def is_prime(num):
+    if num <= 1:
+        return "Neither prime nor composite"
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return "Composite"
+    return "Prime"
+
+# Example usage
+num = 29
+print(f"{num} is {is_prime(num)}")
+
+Q13.Write a python program to check whether a given string is palindrome or not.
+  Palindrome Check
+  def is_palindrome(s):
+    return s == s[::-1]
+
+# Example usage
+string = "radar"
+print(f"The string '{string}' is a palindrome: {is_palindrome(string)}")
+
+Q14. Write a Python program to get the third side of a right-angled triangle from two given sides.
+  Third Side of Right-Angled Triangle
+  import math
+
+def find_third_side(a, b):
+    return math.sqrt(a**2 + b**2)
+
+# Example usage
+a = 3
+b = 4
+print(f"The third side of the triangle is {find_third_side(a, b)}")
+
+Q15. Write a python program to print the frequency of each of the characters present in a given string.
+  Frequency of Characters in a String
+  def char_frequency(s):
+    freq = {}
+    for char in s:
+        if char in freq:
+            freq[char] += 1
+        else:
+            freq[char] = 1
+    return freq
+
+# Example usage
+string = "hello world"
+print(f"The frequency of characters in '{string}' is {char_frequency(string)}")
